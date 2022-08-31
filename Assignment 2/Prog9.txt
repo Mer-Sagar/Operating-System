@@ -1,0 +1,84 @@
+===================================================
+Name      : Mer Sagar Bharatkumar
+Roll      : 21
+Subject   : Operating System
+Course    : MCA-2
+Assignment 2
+===================================================
+9. The book master file contains the fields book_no,
+book_name, author, dateofpurchase ,each field is separated
+by hypen. write a script for
+(A) Add
+(b) Modify
+(C) Delete
+from above file.
+========================================================================================================
+
+echo "Enter file name"
+read filename
+cat $filename
+i=0
+while [ "$i" != "4" ]
+do
+        echo "1.Add"
+        echo "2.Modify"
+        echo "3.Delete"
+        echo "4.Exit"
+        echo "Enter your choice:"
+        read i
+
+        case $i in
+                1)      echo "Enter book id:"
+                        read bid
+                        echo "Enter book name:"
+                        read bname
+                        echo "Enter author:"
+                        read aname
+                        echo "Date of purchase:"
+                        read date1
+                        echo $bid-$bname-$aname-$date1 >> $filename
+                        ;;
+                2) vi $filename
+                                ;;
+                3) echo "1.Delete file"
+                   echo "2.Delete a line"
+
+                   echo "Enter your choice"
+                   read ch
+                   case $ch in
+                           1)rm $filename
+                                        ;;
+                           2)echo "Enter line number"
+                               read lno
+                           #`sed '$lno d' book_master.txt`
+                                           ;;
+                   esac
+        esac
+done
+~
+========================================================================================================
+OUTPUT:
+
+[mca2121@agni assignment2]$ sh p9.sh
+1.Add
+2.Modify
+3.Delete
+4.Exit
+Enter your choice:
+1
+Enter book id:
+100
+Enter book name:
+c++
+Enter author:
+Bjarne Stroustrup
+Date of purchase:
+18/11/2011
+1.Add
+2.Modify
+3.Delete
+4.Exit
+Enter your choice:
+4
+
+

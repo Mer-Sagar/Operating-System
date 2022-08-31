@@ -1,0 +1,38 @@
+===================================================
+Name      : Mer Sagar Bharatkumar
+Roll      : 21
+Subject   : Operating System
+Course    : MCA-2
+Assignment 2
+===================================================
+12. write a script that accepts a string followed by one or more file names from
+ command line and display no of lines that consists of given string each file.
+========================================================================================================
+search=""
+isStrSet=0;
+count=0;
+for currFile in $@
+do
+        if [ $isStrSet -eq 0 ];
+        then
+                searchString=$currFile;
+                isStrSet=1;
+                continue;
+        fi
+        echo "File $currFile:";
+        for currLine in `grep -io "$searchString" $currFile`
+        do
+                count=`expr $count + 1`;
+        done
+        echo $count;
+count=0;
+done
+
+
+============================================================
+Output:
+============================================================
+[mca2121@agni ~]$ sh p12.sh
+File demo.txt: 5
+File demo1.txt:0
+

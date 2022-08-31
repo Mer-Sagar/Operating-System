@@ -1,0 +1,25 @@
+===================================================
+Name      : Mer Sagar Bharatkumar
+Roll      : 21
+Subject   : Operating System
+Course    : MCA-2
+Assignment 2
+===================================================
+
+#5. Write a script that takes file name from user and display all line start
+#   with t or T and second character must be either h or s. (Use grep/sed)
+
+read -p "Enter File Name: " fname
+grep '^[Tt][hs]' $fname
+
+
+============================================================
+Output:
+============================================================
+
+[mca2121@agni assignment2]$ sh prog5.sh
+Enter File Name: file1.txt
+thursday
+The
+tsunami
+Thursday

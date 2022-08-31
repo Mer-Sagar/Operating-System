@@ -1,0 +1,26 @@
+===================================================
+Name      : Mer Sagar Bharatkumar
+Roll      : 21
+Subject   : Operating System
+Course    : MCA-2
+Assignment 2
+===================================================
+
+#6. Write a script that takes file name from user and display all line start
+#   with space( ) . (Use grep/sed)
+
+read -e -p "Enter FileName: " fname
+grep -in "^[ ]" $fname
+
+
+
+============================================================
+Output:
+============================================================
+
+[mca2121@agni assignment2]$ sh prog6.sh
+Enter FileName: file1.txt
+5: mouse
+13: kamal
+14: kishan
+15: the

@@ -1,0 +1,60 @@
+===================================================
+Name      : Mer Sagar Bharatkumar
+Roll      : 21
+Subject   : Operating System
+Course    : MCA-2
+Assignment 2
+===================================================
+
+#7. Write a script which takes input from a file, with multiple records, as:
+#Firstname:middlename:lastname:address:city:pin:phone
+#and displays output as:
+#Record 1
+#Lastname middlename firstname
+#Address
+#City  pin
+#Phone
+#Record 2
+#Lastname middlename firstname
+#Address
+#City  pin
+#Phone
+#and so on, for all records.`
+
+read -p 'Enter File Name : ' Filename
+i=1
+while IFS=':' read FN MN LN ADD CI PIN PH
+do
+        echo -e "\nRecord $i"
+        echo "$LN $MN $FN"
+        echo "$ADD"
+        echo "$CI - $PIN"
+        echo "$PH"
+		i=`expr $i + 1`
+done < $Filename
+
+
+============================================================
+Output:
+============================================================
+
+[mca2121@agni assignment2]$ sh prog7.sh
+Enter File Name : records.txt
+
+Record 1
+Trivedi Ajaybhai Akshit
+Ambawadi
+Ahmedabad - 380007
+9723231843
+
+Record 2
+Mer Bharatbhai Sagar
+Dhoraji
+Rajkot - 360001
+63535374846
+
+Record 3
+Ladani Vithhalbhai Tejas
+Keshod
+Junagadh - 362220
+6352880283

@@ -1,0 +1,36 @@
+===================================================
+Name      : Mer Sagar Bharatkumar
+Roll      : 21
+Subject   : Operating System
+Course    : MCA-2
+Assignment 2
+===================================================
+# 8. Write a script that shows usernames and no. of processes running for
+# them.
+data= echo `who | cut -d" " -f 1`
+cnt=0
+for i in `who | cut -d" " -f 1`
+do
+        echo "Username is" $i
+        cnt=`ps -u $i | wc -l`
+        echo "processes is :" `expr $cnt - 1`
+done
+
+============================================================
+Output:
+============================================================
+
+[mca2121@agni assignment2]$ sh p8.sh
+Username is mca2147
+processes is : 2
+Username is mca2116
+processes is : 5
+Username is mca2137
+processes is : 1
+Username is mca2112
+processes is : 2
+Username is mca2123
+processes is : 1
+Username is mca2121
+processes is : 2
+[mca2121@agni ~]$

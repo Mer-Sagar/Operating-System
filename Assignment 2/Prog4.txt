@@ -1,0 +1,25 @@
+===================================================
+Name      : Mer Sagar Bharatkumar
+Roll      : 21
+Subject   : Operating System
+Course    : MCA-2
+Assignment 2
+===================================================
+
+#4. Write a script that takes file name from user and substitute all spaces
+#   with # value. (Use grep/sed)
+
+read -e -p "Enter File Name: " fname
+sed -n 's/ /#/gp' $fname
+
+
+============================================================
+Output:
+============================================================
+
+[mca2121@agni assignment2]$ sh prog4.sh
+Enter File Name: file1.txt
+#mouse
+#kamal
+#kishan
+#the

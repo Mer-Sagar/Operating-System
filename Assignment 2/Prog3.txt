@@ -1,0 +1,40 @@
+===================================================
+Name      : Mer Sagar Bharatkumar
+Roll      : 21
+Subject   : Operating System
+Course    : MCA-2
+Assignment 2
+===================================================
+
+#3. Write a script that takes file name from user and display all line
+#   starting not with a or b or c with line numbers. (Use grep/sed)
+
+read -e -p "Enter FileName: " fname
+grep -ivn "^[abc]" $fname
+
+
+============================================================
+Output:
+============================================================
+
+[mca2121@agni assignment2]$ sh prog3.sh
+Enter FileName: file1.txt
+5: mouse
+6:keys
+10:sagar
+13: kamal
+14: kishan
+15: the
+16:thursday
+17:The
+18:tsunami
+19:Tiger
+21:sT
+22:taa
+23:Taa
+24:ehaaa
+25:papa
+26:paapa
+27:paapaaa
+28:paapaaaaaa
+29:pp

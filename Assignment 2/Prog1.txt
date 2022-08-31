@@ -1,0 +1,36 @@
+===================================================
+Name      : Mer Sagar Bharatkumar
+Roll      : 21
+Subject   : Operating System
+Course    : MCA-2
+Assignment 2
+===================================================
+
+#1. Write a script that takes file name from user and display all line
+#   starting with a or b or c. (Use grep/sed)
+
+
+# echo "Enter File Name: "
+# read fname
+
+read -e -p "Enter FileName: " fname
+grep -i "^[abc]" $fname
+
+
+
+============================================================
+Output:
+============================================================
+
+[mca2148@agni assignment2]$ sh prog1.sh
+Enter FileName: file1.txt
+ballon
+alien
+cat
+computer
+cpu
+basketball
+alphabet
+akshit
+brijesh
+as
