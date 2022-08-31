@@ -1,2 +1,6 @@
 # Operating-System
-Sell Programming 
+Shell Programming 
+
+- Basic Programs
+- File Handling
+- Using Command Modification data
